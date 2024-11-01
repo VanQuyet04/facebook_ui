@@ -1,2 +1,2 @@
-export 'gradient.dart';
+export 'colors.dart';
 export 'res.dart';

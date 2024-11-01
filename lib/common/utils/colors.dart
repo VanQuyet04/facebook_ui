@@ -9,4 +9,5 @@ class AppColors {
       Color(0xFF00A3FF), // Màu blue nhạt
     ],
   );
+  static const customBlue=Color(0xFF1C6ADF);
 }

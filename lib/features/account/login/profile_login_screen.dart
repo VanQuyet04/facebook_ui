@@ -1,7 +1,7 @@
-import 'package:facebook_ui/common/components/app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../common/components/components.dart';
 import '../../../common/utils/utils.dart';
 import 'widgets/icon_text_item.dart';
 import 'widgets/user_login_item.dart';
@@ -100,7 +100,7 @@ class BottomSection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 40, left: 20, right: 20),
       // Thêm khoảng cách cho nút bấm
-      child: AppButton(
+      child: CustomButton(
         text: 'Create New Facebook Account',
         onPressed: () {},
       ),

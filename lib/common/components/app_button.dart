@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../utils/gradient.dart';
+import '../utils/colors.dart';
 
-class AppButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  const AppButton({
+  const CustomButton({
     super.key,
     required this.text,
     required this.onPressed,
