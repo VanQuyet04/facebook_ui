@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class UserProfileItem extends StatelessWidget {
-  final String imagePath; // Đường dẫn đến ảnh avatar
-  final String userName; // Tên người dùng
-  final VoidCallback onMenuTap; // Callback khi bấm vào menu ba chấm
+  final String imagePath;
+  final String userName;
+  final VoidCallback onMenuTap;
 
   const UserProfileItem({
     super.key,
@@ -18,15 +18,44 @@ class UserProfileItem extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // Avatar
-        ClipRRect(
-          borderRadius: BorderRadius.circular(15), // Bo góc 15
-          child: Image.asset(
-            imagePath, // Đường dẫn đến ảnh từ assets
-            width: 60, // Đặt chiều rộng
-            height: 60, // Đặt chiều cao
-            fit: BoxFit.cover, // Đảm bảo ảnh vừa với khung và giữ tỷ lệ
-          ),
+        // Avatar với thông báo
+        Stack(
+          clipBehavior: Clip.none, // Để biểu tượng không bị cắt
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                imagePath,
+                width: 60,
+                height: 60,
+              ),
+            ),
+            // Biểu tượng thông báo
+            Positioned(
+              right: -5,
+              top: -10,
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.red, // Màu nền cho vòng tròn
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 1
+                  )
+                ),
+                child: const Text(
+                  '8',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
         const SizedBox(width: 15),
         // Tên
@@ -41,9 +70,9 @@ class UserProfileItem extends StatelessWidget {
             ),
           ),
         ),
-        // Menu ba chấm
+
         GestureDetector(
-          onTap: onMenuTap, // Thực hiện hành động khi bấm vào menu ba chấm
+          onTap: onMenuTap,
           child: const Icon(
             CupertinoIcons.ellipsis_vertical,
             color: Colors.black,
