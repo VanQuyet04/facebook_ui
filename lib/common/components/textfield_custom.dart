@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class BottomBorderTextField extends StatefulWidget {
   final String title;
+  final bool? isNumber;
 
-  const BottomBorderTextField({super.key, required this.title});
+  const BottomBorderTextField({super.key, required this.title, this.isNumber});
 
   @override
   State<BottomBorderTextField> createState() => _BottomBorderTextFieldState();
@@ -33,8 +34,11 @@ class _BottomBorderTextFieldState extends State<BottomBorderTextField> {
   Widget build(BuildContext context) {
     return TextField(
       controller: _controller,
+      keyboardType:
+          widget.isNumber == true ? TextInputType.number : TextInputType.text,
       decoration: InputDecoration(
-        labelText: widget.title, // Sử dụng title truyền vào
+        labelText: widget.title,
+        // Sử dụng title truyền vào
         labelStyle: const TextStyle(color: Colors.grey),
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         border: const UnderlineInputBorder(
@@ -48,11 +52,11 @@ class _BottomBorderTextFieldState extends State<BottomBorderTextField> {
         ),
         suffixIcon: _controller.text.isNotEmpty
             ? IconButton(
-          icon: const Icon(Icons.clear),
-          onPressed: () {
-            _controller.clear();
-          },
-        )
+                icon: const Icon(Icons.clear),
+                onPressed: () {
+                  _controller.clear();
+                },
+              )
             : null,
       ),
     );

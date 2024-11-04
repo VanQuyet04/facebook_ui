@@ -1,5 +1,7 @@
-export 'package:facebook_ui/features/account/forgot/forgot_password_screen.dart';
+export 'package:facebook_ui/features/account/forgot/forgot_password_phone_screen.dart';
 export 'package:facebook_ui/features/account/forgot/reset_password_screen.dart';
+export 'package:facebook_ui/features/account/forgot/forgot_password_verify.dart';
+export 'package:facebook_ui/features/account/forgot/forgot_password_email_screen.dart';
 export 'package:facebook_ui/features/account/login/login_screen.dart';
 export 'package:facebook_ui/features/account/login/profile_login_screen.dart';
 export 'package:facebook_ui/features/account/register/choose_password_screen.dart';

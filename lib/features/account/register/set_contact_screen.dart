@@ -1,4 +1,4 @@
-import 'package:facebook_ui/features/ui/widgets/textfield_set_contact_password.dart';
+import 'package:facebook_ui/common/components/textfield_custom.dart';
 import 'package:flutter/material.dart';
 import '../../../common/components/components.dart';
 import '../../ui/widgets/widgets.dart';
@@ -31,6 +31,7 @@ class _SetContactScreenState extends State<SetContactScreen> {
             // Sử dụng GenderSelection widget
             const BottomBorderTextField(
               title: 'Mobile number',
+              isNumber: true,
             ),
             const SizedBox(height: 60),
             CustomButton(
