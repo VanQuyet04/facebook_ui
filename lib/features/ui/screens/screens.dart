@@ -8,3 +8,4 @@ export 'package:facebook_ui/features/account/register/set_birthday_screen.dart';
 export 'package:facebook_ui/features/account/register/set_contact_screen.dart';
 export 'package:facebook_ui/features/account/register/set_name_screen.dart';
 export 'package:facebook_ui/features/account/register/terms_screen.dart';
+export 'package:facebook_ui/features/account/register/set_gender_screen.dart';
