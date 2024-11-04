@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../../common/components/components.dart';
 import '../../../common/utils/utils.dart';
-import 'widgets/icon_text_item.dart';
-import 'widgets/user_login_item.dart';
+import '../../ui/widgets/widgets.dart';
 
 class ProfileLoginScreen extends StatelessWidget {
   const ProfileLoginScreen({super.key});
@@ -65,8 +64,7 @@ class MiddleSection extends StatelessWidget {
             UserProfileItem(
               imagePath: Resource.imgAvatar, // Đường dẫn đến ảnh avatar
               userName: 'Cristiano Ronaldo', // Tên người dùng
-              onMenuTap: () {
-              },
+              onMenuTap: () {},
             ),
             // Avatar và tên
             const SizedBox(height: 20), // Khoảng cách giữa tên và item
@@ -107,5 +105,3 @@ class BottomSection extends StatelessWidget {
     );
   }
 }
-
-

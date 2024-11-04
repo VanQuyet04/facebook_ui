@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'features/account/account.dart';
+import 'features/ui/screens/screens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home:  const SetBirthDayScreen(),
+      home: const SetBirthDayScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
